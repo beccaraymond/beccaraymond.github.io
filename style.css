@@ -1,83 +1,95 @@
 @charset "utf-8";
-/*** NAV BAR ***/
+
+/*** NAV BAR BOOTSTRAP***/
+/*navbar background purple and border is white*/
 .navbar-default {
     background-color: #6c3176;
     border-color: #ffffff;
 }
-/* title */
+/* title - font color white */
 .navbar-default .navbar-brand {
     color: #ffffff;
 }
+/* navbar hovor is white */
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
     color: #ffffff;
 }
-/*list items*/
+/*navbar list items font is white*/
 .navbar-default .navbar-nav > li > a {
     color: #ffffff;
 }
+/* navbar list items hovor color is black*/
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
     color: #000000;
 }
-/*active item*/
+/*active item color becomes white and background color is purple*/
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:hover, 
 .navbar-default .navbar-nav > .active > a:focus {
 	color: #ffffff;
     background-color: #944ea0;
 }
-/* padding after nav bar*/
+/* padding after nav bar for body*/
 body{
 padding-top: 50px;
 }
 
-/* buffer */
+/* buffer- adds spacing buffer to top of container */
 .top-buffer {
 	 margin-top:20px;
 }
+/* buffer - adds spacing buffer to top and bottom of container */
 .mid-buffer {
 	 margin-top:50px;
 	 margin-bottom: 50px;
 }
-/* main headers */
+/* sets main header margins and font */
 .main-header{
 	margin-top:40px;
 	font-size: 50px;
 	font-family: Verdana, Geneva, sans-serif;
 	color: black;
 }
+/* sets main description font */
 .main-description{
 	font-size: 30px;
 	font-family: Verdana, Geneva, sans-serif;
 	letter-spacing: 5px;
 	color: #999;
 }
+/* for e-mail link on home page - font */
 .main-contact{
 	font-size: 15px;
 	font-family: Verdana, Geneva, sans-serif;
 	color: #009;
 }
+/*minimizes space on top of container */
 .no-buffer{
 	margin-top:-10px;
 }
-/* paragraph*/
+/* paragraph - add spacing on left and right*/
 p{
 	margin-left: 20px;
 	margin-right: 20px;
 }
-/*paragraph border*/
+/*rounded rectangle border with different size radii*/
 #roundedrect {
     border-radius: 10px 40px;
 	border: 2px solid #E2AFF3;
     padding: 20px; 
 }
+/*rounded rectangle border with same size radii for all four corners*/
 #roundedrectsame {
     border-radius: 10px;
 	border: 2px solid #E2AFF3;
 	padding: 20px;
 }
-/* stop content from overflowing*/
+/*stop content from overflowing:
+The bootstrap grid layout kept causing an overflow in the right side of the screen.
+use of rows and columns would cause the content to overflow with a horizontal scroll bar.
+This fix sets the max-width of the container to be the width of the screen, and eliminates any extra space*/
 .container {
    max-width: 100%;
    padding-right: 0;
