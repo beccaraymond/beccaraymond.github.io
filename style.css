@@ -1,97 +1,250 @@
 @charset "utf-8";
+/* CSS Document */
 
-/*** NAV BAR BOOTSTRAP***/
-/*navbar background purple and border is white*/
-.navbar-default {
-    background-color: #6c3176;
-    border-color: #ffffff;
-}
-/* title - font color white */
-.navbar-default .navbar-brand {
-    color: #ffffff;
-}
-/* navbar hovor is white */
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-    color: #ffffff;
-}
-/*navbar list items font is white*/
-.navbar-default .navbar-nav > li > a {
-    color: #ffffff;
-}
-/* navbar list items hovor color is black*/
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: #000000;
-}
-/*active item color becomes white and background color is purple*/
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
-.navbar-default .navbar-nav > .active > a:focus {
-	color: #ffffff;
-    background-color: #944ea0;
-}
-/* padding after nav bar for body*/
-body{
-padding-top: 50px;
+a:link - a normal, unvisited link
+a:visited - a link the user has visited
+a:hover - a link when the user mouses over it
+a:active - a link the moment it is clicked
+
+a:link{
+	color: #572C69;
 }
 
-/* buffer- adds spacing buffer to top of container */
-.top-buffer {
-	 margin-top:20px;
+a:visited {
+	color: #C77AEF;
 }
-/* buffer - adds spacing buffer to top and bottom of container */
-.mid-buffer {
-	 margin-top:50px;
-	 margin-bottom: 50px;
+
+a:hover {
+	color: #9A44AC;
 }
-/* sets main header margins and font */
+
+a:active {
+	color: #EFC7FA;
+}
+
+
+@font-face {
+    font-family: blackout;
+    src: url(blackout_midnight-webfont.woff);
+}
+
+@font-face {
+	font-family: allerLight;
+	src: url(aller_lt-webfont.woff);
+}
+
+@font-face {
+	font-family: futura;
+	src: url(futuralt-webfont.woff);
+}
+
+@font-face {
+	font-family: futuraLight;
+	src: url(futuralt-light-webfont.woff);
+}
+
+p {
+    line-height: 100%;
+}
+
+.tab{
+	padding-left: 5px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic{
+	font-style: italic;
+}
+
+body {
+    background-color: black;
+	overflow-x: hidden;
+}
+
 .main-header{
-	margin-top:40px;
+	margin-top:230px;
 	font-size: 50px;
-	font-family: Verdana, Geneva, sans-serif;
+	font-family: blackout, Verdana, sans-serif;
+	color: white;
+	text-align:center;
+}
+
+.sub-head{
+	margin-top:20px;
+	font-size: 20px;
+	font-family: allerLight, Verdana, sans-serif;
+	color: white;
+	text-align:center;
+}
+
+.btn-transparent{
+	margin-top: 50px;
+	background-color:transparent;
+	border-color: white;
+	color: white;
+	width: 150px;
+	height: 30px;
+	font-family: futura, Verdana, sans-serif;
+	font-size: 12px;
+	
+}
+
+.arrow{
+	color: white;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.navbar{
+	font-family: future, Verdana, sans-serif;
+	margin-bottom: -10px;
+}
+
+.navbar-right{
+		margin-right: 200px;	
+}
+
+.goToTop {
+  position: fixed;
+  top: 0;
+  height: 70px;
+  z-index: 1;
+}
+
+.content-head{
+	margin-top:100px;
+	font-size: 43px;
+	font-family: blackout, Verdana, sans-serif;
 	color: black;
+	text-align:center;
 }
-/* sets main description font */
-.main-description{
-	font-size: 30px;
-	font-family: Verdana, Geneva, sans-serif;
-	letter-spacing: 5px;
-	color: #999;
+
+.content-subhead{
+	margin-top:100px;
+	font-size: 23px;
+	font-family: futura, Verdana, sans-sarif;
+	color: #171717;
+	text-align:center;
 }
-/* for e-mail link on home page - font */
-.main-contact{
+
+.content{
+	margin-top: 30px;
 	font-size: 15px;
-	font-family: Verdana, Geneva, sans-serif;
-	color: #009;
+	font-family: allerLight, Verdana, sans-sarif;
+	color: #3B3B3B;
+	text-align:left;
+	margin-bottom: 30px;
 }
-/*minimizes space on top of container */
-.no-buffer{
-	margin-top:-10px;
+
+.content-list{
+	font-size: 15px;
+	font-family: allerLight, Verdana, sans-sarif;
+	color: #3B3B3B;
+	text-align:right;
 }
-/* paragraph - add spacing on left and right*/
-p{
-	margin-left: 20px;
-	margin-right: 20px;
+
+.white{
+	color: white;
 }
-/*rounded rectangle border with different size radii*/
-#roundedrect {
-    border-radius: 10px 40px;
-	border: 2px solid #E2AFF3;
-    padding: 20px; 
+.content-center{
+	margin-top: 30px;
+	font-size: 15px;
+	font-family: allerLight, Verdana, sans-sarif;
+	color: #3B3B3B;
+	text-align:center;
+	margin-bottom: 30px;
 }
-/*rounded rectangle border with same size radii for all four corners*/
-#roundedrectsame {
-    border-radius: 10px;
-	border: 2px solid #E2AFF3;
-	padding: 20px;
+
+.home{
+	padding-top:100px;
+	margin-top: -100px;
+	min-width: 100%;
+	display: inline-block;
+	background-image: url("becca.png");
 }
-/*stop content from overflowing:
-The bootstrap grid layout kept causing an overflow in the right side of the screen.
-use of rows and columns would cause the content to overflow with a horizontal scroll bar.
-This fix sets the max-width of the container to be the width of the screen, and eliminates any extra space*/
-.container {
-   max-width: 100%;
-   padding-right: 0;
-   padding-left: 0;
- }
+
+.history{
+	min-width: 100%;
+	display: inline-block;
+	background-color: #CCC;
+	
+}
+
+.projects{
+	min-width: 100%;
+	display: inline-block;
+	background-color: #EDE9EC;
+	
+}
+
+.skills{
+	min-width: 100%;
+	display: inline-block;
+	background-color: #1D1D1D;
+	
+}
+
+.progress-bar-blue {
+      background-color: #5EA2F4 !important;
+}
+
+.progress-bar-dblue {
+      background-color: #261E91 !important;
+}
+
+.ostem{
+	min-width: 100%;
+	display: inline-block;
+	background-color: #C8C8C8;
+	
+}
+
+.content-subhead-ostem{
+	margin-top:0px;
+	font-size: 18px;
+	font-family: allerLight, Verdana, sans-sarif;
+	color: black;
+	text-align:center;
+}
+
+.content-center-sub{
+	font-size: 15px;
+	font-family: allerLight, Verdana, sans-sarif;
+	color: #3B3B3B;
+	text-align:center;
+	margin-bottom: 30px;
+}
+
+.involvement{
+	min-width: 100%;
+	display: inline-block;
+	background-color: #E5E5E5;
+	
+}
+
+.contact{
+	min-width: 100%;
+	display: inline-block;
+	background-color: #2D2D2D;
+	
+}
+
+.contact-head{
+	margin-top:50px;
+	font-size: 43px;
+	font-family: blackout, Verdana, sans-serif;
+	color: white;
+	text-align:center;
+}
+
+.content-contact{
+	margin-top: 20px;
+	font-size: 15px;
+	font-family: allerLight, Verdana, sans-sarif;
+	color: white;
+	text-align:left;
+	margin-bottom: 30px;
+}
